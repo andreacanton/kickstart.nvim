@@ -24,6 +24,13 @@ return {
       { '<leader>nT', dotnet 'test solution', desc = '.[N]ET [T]est solution' },
       { '<leader>nr', dotnet 'run', desc = '.[N]ET [R]un project' },
       { '<leader>nd', dotnet 'debug', desc = '.[N]ET [D]ebug project' },
+      {
+        '<leader>nx',
+        function()
+          require('easy-dotnet').stop()
+        end,
+        desc = '.[N]ET stop run/debug session',
+      },
       { '<leader>nw', dotnet 'watch', desc = '.[N]ET [W]atch' },
       { '<leader>nR', dotnet 'restore', desc = '.[N]ET [R]estore' },
       { '<leader>ne', dotnet 'diagnostic errors', desc = '.[N]ET solution [E]rrors' },
